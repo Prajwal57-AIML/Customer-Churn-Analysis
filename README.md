@@ -1,238 +1,463 @@
-# 🚀 End-to-End Customer Churn Prediction & Insights
+# 🚀 End-to-End Customer Churn Analysis & Prediction
 
-![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-ScikitLearn-orange)
 ![Visualization](https://img.shields.io/badge/Data%20Visualization-PowerBI-yellow)
+![Database](https://img.shields.io/badge/Database-SQL%20Server-red)
 ![Status](https://img.shields.io/badge/Project-Completed-green)
 
 ---
 
 # 📌 Project Overview
 
-Customer churn is a major challenge for subscription-based businesses.  
-Losing customers directly impacts **revenue, growth, and long-term sustainability**.
+Customer churn is one of the biggest challenges faced by subscription-based businesses. When customers leave a service, it directly impacts **revenue, profitability, and long-term growth**.
 
-This project builds a **complete end-to-end data science pipeline** to:
+This project demonstrates a **complete end-to-end churn analytics pipeline**, combining:
 
-• Predict whether a customer will churn  
-• Identify key factors influencing churn  
-• Provide actionable insights for improving retention  
+- SQL Server for ETL and data processing
+- Power BI for business intelligence dashboards
+- Python & Machine Learning for churn prediction
 
-The project integrates **data analysis, machine learning, and interactive dashboards** to support **data-driven business decisions**.
+The goal is to **identify customers at risk of leaving and generate actionable insights** that help businesses improve customer retention.
 
 ---
-
 
 # 🎯 Business Problem
 
-Customer churn leads to **significant financial losses** for companies.
+Companies must answer critical questions such as:
 
-Businesses need to:
+- Which customers are most likely to churn?
+- What factors influence churn behavior?
+- How can businesses reduce churn and retain customers?
 
-- Identify customers likely to churn
-- Understand drivers of churn
-- Implement strategies to retain high-risk customers
-
-This project solves the problem using **machine learning and business analytics**.
+This project addresses these questions using **data analytics and predictive modeling**.
 
 ---
 
-# 🧠 Project Architecture
+# 🎯 Project Objectives
+
+The main objectives of this project are:
+
+✔ Build a **complete ETL pipeline using SQL Server**  
+✔ Analyze customer behavior using **Power BI dashboards**  
+✔ Identify **key churn drivers**  
+✔ Develop a **Machine Learning model to predict churn**  
+✔ Enable **data-driven marketing strategies**
+
+---
+
+# 👥 Target Audience
+
+Although the dataset represents a **telecom company**, the techniques used in this project are applicable to many industries:
+
+- Telecom
+- Banking & Finance
+- E-commerce
+- Retail
+- Healthcare
+- Subscription businesses
+
+Any organization focused on **customer retention** can benefit from churn analytics.
+
+---
+
+# 🏗 Project Architecture
 
 ```
-Data Source
-    ↓
-Data Cleaning & Preprocessing
-    ↓
-Exploratory Data Analysis (EDA)
-    ↓
-Feature Engineering
-    ↓
-Machine Learning Model Training
-    ↓
-Model Evaluation
-    ↓
+CSV Data Source
+        ↓
+SQL Server ETL Pipeline
+        ↓
+Data Cleaning & Transformation
+        ↓
+Power BI Data Modeling
+        ↓
+Interactive Business Dashboard
+        ↓
+Machine Learning Model (Random Forest)
+        ↓
 Customer Churn Prediction
-    ↓
-Power BI Business Dashboard
+        ↓
+Power BI Prediction Dashboard
 ```
 
 ---
 
 # 📊 Dashboard Preview
 
-Interactive dashboard built using **Power BI**
+Interactive dashboard built using **Power BI**.
 
-(Add screenshot after uploading image to repo)
+(Add screenshot after uploading image)
 
 ```
 ![Dashboard](images/dashboard.png)
 ```
 
-Dashboard highlights:
+Dashboard includes:
 
-- Overall churn rate
-- Churn by contract type
-- Churn by payment method
-- Customer demographics
-- Monthly charges impact on churn
+- Total Customers
+- New Joiners
+- Total Churn
+- Churn Rate
+- Demographic Analysis
+- Payment Method Insights
+- Contract Analysis
+- Geographic Analysis
+- Service Usage Insights
 
 ---
 
-# 📂 Dataset
+# 📂 Dataset Description
 
-The dataset contains telecom customer information including:
+The dataset contains telecom customer data including:
 
 - Customer demographics
+- Age
+- Gender
+- Marital status
+- State
 - Contract type
-- Payment methods
+- Payment method
 - Monthly charges
+- Internet services
+- Streaming services
 - Customer tenure
-- Internet service type
-- Churn status
+- Customer status (Joined / Stayed / Churned)
 
-This data is used to analyze patterns and train machine learning models.
-
----
-
-# 🔍 Exploratory Data Analysis
-
-EDA was performed to understand churn patterns.
-
-Key observations:
-
-- Customers with **month-to-month contracts churn the most**
-- **Higher monthly charges increase churn probability**
-- **Electronic check payment method has higher churn rates**
-- **Customers with longer tenure churn less**
-
----
-
-# 🤖 Machine Learning Models
-
-The following models were implemented and compared:
-
-- Logistic Regression
-- Decision Tree
-- Random Forest
-
-### Model Evaluation Metrics
-
-- Accuracy
-- Precision
-- Recall
-- ROC-AUC Score
-
-### Model Performance
-
-| Model | Accuracy |
-|------|---------|
-| Logistic Regression | 82% |
-| Decision Tree | 85% |
-| Random Forest | 89% |
-
-Random Forest performed the best and was selected for prediction.
-
----
-
-# 📈 Key Business Insights
-
-✔ Customers with **month-to-month contracts have the highest churn rate**
-
-✔ Customers paying through **electronic checks churn more frequently**
-
-✔ **New customers churn more compared to long-term customers**
-
-✔ **Long-term contracts significantly reduce churn**
-
----
-
-# 💡 Business Recommendations
-
-Based on the analysis:
-
-• Offer incentives for **long-term contracts**
-
-• Improve **onboarding experience for new customers**
-
-• Provide **special retention offers for high-risk customers**
-
-• Encourage **automatic payment methods**
+This data helps analyze **behavioral patterns and churn drivers**.
 
 ---
 
 # 🛠 Tech Stack
 
-### Programming Language
+### Programming
 - Python
 
-### Libraries
+### Data Processing
+- SQL Server
+- SQL Server Management Studio (SSMS)
+
+### Python Libraries
 - Pandas
 - NumPy
-- Scikit-learn
 - Matplotlib
 - Seaborn
+- Scikit-learn
+- Joblib
 
 ### Visualization
 - Power BI
 
-### Tools
+### Development Tools
 - Jupyter Notebook
+- Anaconda
 - Git
 - GitHub
+
+---
+
+# ⚙️ STEP 1 — ETL Process Using SQL Server
+
+The project begins with building a **data pipeline using SQL Server**.
+
+### Database Creation
+
+```sql
+CREATE DATABASE db_Churn
+```
+
+### Data Import
+
+Customer data from a CSV file is imported into a staging table.
+
+```
+stg_Churn
+```
+
+---
+
+### Data Exploration
+
+Example query:
+
+```sql
+SELECT Gender, Count(Gender) as TotalCount
+FROM stg_Churn
+GROUP BY Gender
+```
+
+---
+
+### Handling Missing Values
+
+Example:
+
+```sql
+ISNULL(Value_Deal, 'None')
+ISNULL(Online_Security, 'No')
+```
+
+---
+
+### Production Table Creation
+
+Cleaned data is inserted into the production table:
+
+```
+prod_Churn
+```
+
+---
+
+### Power BI Views
+
+```
+vw_ChurnData
+vw_JoinData
+```
+
+---
+
+# 📊 STEP 2 — Power BI Data Transformation
+
+New columns created:
+
+**Churn Status**
+
+```
+if Customer_Status = "Churned" then 1 else 0
+```
+
+**Monthly Charge Range**
+
+```
+< 20
+20 - 50
+50 - 100
+> 100
+```
+
+---
+
+### Mapping Tables
+
+**Age Group**
+
+```
+< 20
+20 – 35
+36 – 50
+> 50
+```
+
+**Tenure Group**
+
+```
+< 6 Months
+6-12 Months
+12-18 Months
+18-24 Months
+>= 24 Months
+```
+
+---
+
+# 📏 STEP 3 — Power BI Measures
+
+```
+Total Customers = COUNT(prod_Churn[Customer_ID])
+
+New Joiners = CALCULATE(COUNT(prod_Churn[Customer_ID]), prod_Churn[Customer_Status]="Joined")
+
+Total Churn = SUM(prod_Churn[Churn Status])
+
+Churn Rate = Total Churn / Total Customers
+```
+
+---
+
+# 📊 STEP 4 — Power BI Dashboard
+
+Executive summary dashboard includes:
+
+### KPIs
+
+- Total Customers
+- New Joiners
+- Total Churn
+- Churn Rate
+
+### Demographics
+
+- Gender churn rate
+- Age group churn rate
+
+### Account Information
+
+- Payment method churn
+- Contract churn
+- Tenure churn
+
+### Geographic Analysis
+
+- State-level churn
+
+### Service Analysis
+
+- Internet service usage
+- Streaming services
+
+---
+
+# 🤖 STEP 5 — Machine Learning Model
+
+A **Random Forest Classifier** was used to predict churn.
+
+### Why Random Forest?
+
+Random Forest combines multiple decision trees to improve prediction accuracy and reduce overfitting.
+
+---
+
+### ML Workflow
+
+```
+Data Loading
+↓
+Data Cleaning
+↓
+Label Encoding
+↓
+Train-Test Split
+↓
+Random Forest Training
+↓
+Model Evaluation
+↓
+Feature Importance
+```
+
+---
+
+# 🔮 STEP 6 — Predict Future Churners
+
+Steps:
+
+1 Load joiner data  
+2 Encode categorical variables  
+3 Predict churn using trained model  
+4 Identify high-risk customers  
+5 Export predictions
+
+Output file:
+
+```
+Predictions.csv
+```
+
+---
+
+# 📊 Prediction Dashboard
+
+The predicted churn customers are visualized in Power BI.
+
+Includes:
+
+- Customer ID
+- Monthly Charges
+- Total Revenue
+- Refunds
+- Referrals
+- Demographic insights
+- Contract analysis
+- Payment method analysis
+- Geographic churn distribution
 
 ---
 
 # 📁 Project Structure
 
 ```
-Customer-Churn-Prediction
+Customer-Churn-Analysis
 │
 ├── data
-│   ├── vw_ChurnData.csv
+│   ├── churn_dataset.csv
+│
+├── sql
+│   ├── etl_queries.sql
 │
 ├── notebooks
-│   ├── churn_analysis.ipynb
+│   ├── churn_prediction.ipynb
 │
 ├── dashboard
-│   ├── Churn_Analysis.pbix
+│   ├── churn_dashboard.pbix
 │
-├── models
-│   ├── churn_model.pkl
+├── predictions
+│   ├── Predictions.csv
 │
 ├── images
 │   ├── dashboard.png
 │
-├── README.md
+└── README.md
 ```
 
 ---
 
 # 🚀 How to Run the Project
 
-### 1 Clone the Repository
+### 1 Clone Repository
 
 ```
-git clone https://github.com/your-username/customer-churn-prediction.git
+git clone https://github.com/your-username/customer-churn-analysis.git
 ```
 
-### 2 Navigate to the Project Directory
+### 2 Install Libraries
 
 ```
-cd customer-churn-prediction
+pip install pandas numpy matplotlib seaborn scikit-learn joblib
 ```
 
-### 3 Install Dependencies
-
-```
-pip install -r requirements.txt
-```
-
-### 4 Run the Notebook
+### 3 Run Jupyter Notebook
 
 ```
 jupyter notebook
 ```
+
+### 4 Run ML Notebook
+
+```
+churn_prediction.ipynb
+```
+
+### 5 Open Power BI Dashboard
+
+```
+churn_dashboard.pbix
+```
+
+---
+
+# 📈 Key Insights
+
+✔ Month-to-month contracts show highest churn  
+
+✔ Electronic check payment customers churn more  
+
+✔ New customers churn more frequently  
+
+✔ Long-term contracts reduce churn significantly  
+
+---
+
+# 💡 Business Recommendations
+
+• Promote **long-term contracts**
+
+• Improve **customer onboarding experience**
+
+• Offer **targeted retention campaigns**
+
+• Encourage **automatic payment methods**
 
 ---
 
@@ -240,23 +465,21 @@ jupyter notebook
 
 This project demonstrates:
 
-✔ End-to-End Data Science Workflow  
-✔ Data Cleaning & Feature Engineering  
-✔ Machine Learning Model Development  
-✔ Business Intelligence Dashboard  
-✔ Data-Driven Decision Making  
+✔ End-to-End Data Analytics Pipeline  
+✔ SQL Data Engineering  
+✔ Power BI Business Intelligence  
+✔ Machine Learning Prediction  
+✔ Customer Behavior Analysis  
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 
 
 **Prajwal H**
 
-Finance Lead – Project ReachOut Mysore  
 Passionate about **Data Science, AI, and Business Analytics**
 
 ---
 
-# ⭐ Support
 
-If you found this project useful, please **⭐ star the repository**.
+
