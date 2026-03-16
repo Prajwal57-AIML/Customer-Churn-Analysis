@@ -1,6 +1,6 @@
 # 🚀 End-to-End Customer Churn Prediction & Insights
 
-![Python](https://img.shields.io/badge/Python-3.9-blue)
+![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-ScikitLearn-orange)
 ![Visualization](https://img.shields.io/badge/Data%20Visualization-PowerBI-yellow)
 ![Status](https://img.shields.io/badge/Project-Completed-green)
