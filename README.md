@@ -22,13 +22,6 @@ The project integrates **data analysis, machine learning, and interactive dashbo
 
 ---
 
-# 🎥 Project Walkthrough
-
-Watch the complete project explanation:
-
-https://www.youtube.com/watch?v=QFDslca5AX8
-
----
 
 # 🎯 Business Problem
 
